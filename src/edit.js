@@ -101,7 +101,7 @@ function TableEdit( {
 											insertBlocksAfter,
 											isSelected,
 										} ) {
-	const { hasFixedLayout, caption, head, body } = attributes;
+	const { hasFixedLayout, head, body } = attributes;
 	const [ initialRowCount, setInitialRowCount ] = useState( 2 );
 	const [ initialColumnCount, setInitialColumnCount ] = useState( 2 );
 	const [ selectedCell, setSelectedCell ] = useState();

@@ -12,7 +12,7 @@ import {
 } from '@wordpress/block-editor';
 
 export default function save( { attributes } ) {
-	const { hasFixedLayout, head, body, caption } = attributes;
+	const { hasFixedLayout, head, body } = attributes;
 	const isEmpty = ! head.length && ! body.length;
 
 	if ( isEmpty ) {
@@ -22,8 +22,6 @@ export default function save( { attributes } ) {
 	const classes = classnames( {
 		'has-fixed-layout': hasFixedLayout,
 	} );
-
-	const hasCaption = ! RichText.isEmpty( caption );
 
 	const Section = ( { type, rows } ) => {
 		if ( ! rows.length ) {
@@ -74,9 +72,6 @@ export default function save( { attributes } ) {
 				<Section type="head" rows={ head } />
 				<Section type="body" rows={ body } />
 			</table>
-			{ hasCaption && (
-				<RichText.Content tagName="figcaption" value={ caption } />
-			) }
 		</figure>
 	);
 }

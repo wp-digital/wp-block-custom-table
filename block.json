@@ -6,19 +6,9 @@
 	"icon": "editor-table",
 	"description": "Block allows to move rows in the table",
 	"attributes": {
-		"alignment": {
-			"type": "string",
-			"default": "none"
-		},
 		"hasFixedLayout": {
 			"type": "boolean",
 			"default": false
-		},
-		"caption": {
-			"type": "string",
-			"source": "html",
-			"selector": "figcaption",
-			"default": ""
 		},
 		"head": {
 			"type": "array",
@@ -94,7 +84,7 @@
 	"supports": {
 		"anchor": true,
 		"align": true,
-		"__experimentalSelector": ".wp-block-table > table"
+		"__experimentalSelector": ".wp-block-innocode-wp-block-custom-table > table"
 	},
 	"styles": [
 		{
