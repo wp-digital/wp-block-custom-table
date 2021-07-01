@@ -1,0 +1,111 @@
+{
+	"apiVersion": 2,
+	"name": "innocode/wp-block-custom-table",
+	"title": "Custom table",
+	"category": "innocode",
+	"icon": "editor-table",
+	"description": "Block allows to move rows in the table",
+	"attributes": {
+		"alignment": {
+			"type": "string",
+			"default": "none"
+		},
+		"hasFixedLayout": {
+			"type": "boolean",
+			"default": false
+		},
+		"caption": {
+			"type": "string",
+			"source": "html",
+			"selector": "figcaption",
+			"default": ""
+		},
+		"head": {
+			"type": "array",
+			"default": [],
+			"source": "query",
+			"selector": "thead tr",
+			"query": {
+				"cells": {
+					"type": "array",
+					"default": [],
+					"source": "query",
+					"selector": "td,th",
+					"query": {
+						"content": {
+							"type": "string",
+							"source": "html"
+						},
+						"tag": {
+							"type": "string",
+							"default": "td",
+							"source": "tag"
+						},
+						"scope": {
+							"type": "string",
+							"source": "attribute",
+							"attribute": "scope"
+						},
+						"align": {
+							"type": "string",
+							"source": "attribute",
+							"attribute": "data-align"
+						}
+					}
+				}
+			}
+		},
+		"body": {
+			"type": "array",
+			"default": [],
+			"source": "query",
+			"selector": "tbody tr",
+			"query": {
+				"cells": {
+					"type": "array",
+					"default": [],
+					"source": "query",
+					"selector": "td,th",
+					"query": {
+						"content": {
+							"type": "string",
+							"source": "html"
+						},
+						"tag": {
+							"type": "string",
+							"default": "td",
+							"source": "tag"
+						},
+						"scope": {
+							"type": "string",
+							"source": "attribute",
+							"attribute": "scope"
+						},
+						"align": {
+							"type": "string",
+							"source": "attribute",
+							"attribute": "data-align"
+						}
+					}
+				}
+			}
+		}
+	},
+	"supports": {
+		"anchor": true,
+		"align": true,
+		"__experimentalSelector": ".wp-block-table > table"
+	},
+	"styles": [
+		{
+			"name": "regular",
+			"label": "Default",
+			"isDefault": true
+		},
+		{ "name": "alternative", "label": "Alternative" }
+	],
+	"textdomain": "wp-block-custom-table",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
