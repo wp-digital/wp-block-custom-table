@@ -63,6 +63,11 @@
 	border-collapse: inherit;
 	background-color: transparent;
 
+	tr:first-child {
+		td {
+			border-bottom-color: transparent;
+		}
+	}
 	th,
 	td {
 	  border-left-color: transparent;
