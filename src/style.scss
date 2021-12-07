@@ -63,10 +63,16 @@
 	border-collapse: inherit;
 	background-color: transparent;
 
+	tr:last-child {
+		td {
+			border-bottom-color: transparent;
+		}
+	}
 	th,
 	td {
 	  border-left-color: transparent;
 	  border-right-color: transparent;
+	  border-top-color: transparent;
 	}
   }
 }
