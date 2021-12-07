@@ -92,7 +92,14 @@
 			"label": "Default",
 			"isDefault": true
 		},
-		{ "name": "alternative", "label": "Alternative" }
+		{
+			"name": "alternative",
+			"label": "Alternative"
+		},
+		{
+			"name": "custom",
+			"label": "50/15/15/15"
+		}
 	],
 	"textdomain": "wp-block-custom-table",
 	"editorScript": "file:./build/index.js",
