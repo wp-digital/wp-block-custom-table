@@ -99,6 +99,10 @@
 		{
 			"name": "custom",
 			"label": "50/15/15/15"
+		},
+		{
+			"name": "custom-two",
+			"label": "65/35"
 		}
 	],
 	"textdomain": "wp-block-custom-table",
