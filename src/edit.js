@@ -379,7 +379,7 @@ function TableEdit( {
 								scope={ CellTag === 'th' ? scope : undefined }
 								value={ content }
 								onChange={ onChange }
-								unstableOnFocus={ () => {
+								onFocus={ () => {
 									setSelectedCell( {
 										sectionName: name,
 										rowIndex,
